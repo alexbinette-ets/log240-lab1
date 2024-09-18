@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Wed Sep 18 17:07:15 EDT 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-0192-06f5-f3e5-0000015e3ae8 
+on database directory /mnt/f/OneDrive - ETS/LOG240/labo1/financej-team07/FinanceJDB with class loader java.net.URLClassLoader@5633dafd 
+Loaded from file:/home/alexb/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Ubuntu
+java.runtime.version=21.0.4+7-Ubuntu-1ubuntu220.04
+user.dir=/mnt/f/OneDrive - ETS/LOG240/labo1/financej-team07
+os.name=Linux
+os.arch=amd64
+os.version=5.15.133.1-microsoft-standard-WSL2
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Sep 18 17:07:21 EDT 2024: Shutting down Derby engine
+----------------------------------------------------------------
+Wed Sep 18 17:07:21 EDT 2024:
+Shutting down instance a816c00e-0192-06f5-f3e5-0000015e3ae8 on database directory /mnt/f/OneDrive - ETS/LOG240/labo1/financej-team07/FinanceJDB with class loader java.net.URLClassLoader@5633dafd 
+----------------------------------------------------------------

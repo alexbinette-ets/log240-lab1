@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -9,41 +10,42 @@
   <name>FinanceJ</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
- <description>FinanceJ is a personal finance Java application. A simple
+  <description>FinanceJ is a personal finance Java application. A simple
  interface allows the user to track income/expenses vs budget. No
 accounting
     experience required 
   </description>
- <organization>
- <name>ÉTS - LOG240 - Team XX</name>
- <url>http://www.etsmtl.ca</url>
- </organization>
- <developers>
- <developer>
- <name>Alexandre Binette</name>
- </developer>
- <developer>
- <name>Alexis Goyette</name>
- </developer>
- <developer>
- <name>Zein-El-Abdin Hazimeh</name>
- </developer>
- <developer>
- <name>Gregor Postmus</name>
- </developer>
- </developers>  <properties>
+  <organization>
+    <name>ÉTS - LOG240 - Team XX</name>
+    <url>http://www.etsmtl.ca</url>
+  </organization>
+  <developers>
+    <developer>
+      <name>Alexandre Binette</name>
+    </developer>
+    <developer>
+      <name>Alexis Goyette</name>
+    </developer>
+    <developer>
+      <name>Zein-El-Abdin Hazimeh</name>
+    </developer>
+    <developer>
+      <name>Gregor Postmus</name>
+    </developer>
+  </developers>
+  <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>17</maven.compiler.release>
   </properties>
 
-    <dependencies>
-      <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>junit-bom</artifactId>
-        <version>5.11.0</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+  <dependencies>
+    <dependency>
+      <groupId>org.junit</groupId>
+      <artifactId>junit-bom</artifactId>
+      <version>5.11.0</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
 
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -57,60 +59,97 @@ accounting
       <version>5.11.0</version>
     </dependency>
 
-   <dependency>
-   <groupId>org.apache.derby</groupId>
-   <artifactId>derby</artifactId>
-   <version>10.11.1.1</version>
-   </dependency>
+    <dependency>
+      <groupId>org.apache.derby</groupId>
+      <artifactId>derby</artifactId>
+      <version>10.11.1.1</version>
+    </dependency>
 
   </dependencies>
-   <build>
-  <plugins>
-  <!-- exec plugin to run java application through maven -->
-  <plugin>
-  <groupId>org.codehaus.mojo</groupId>
-  <artifactId>exec-maven-plugin</artifactId>
-  <version>1.3.2</version>
-  <executions>
-  <execution>
-  <goals>
-  <goal>java</goal>
-  </goals>
-  </execution>
-  </executions>
-  <configuration>
-  <mainClass>ca.etsmtl.log240.financej.FinanceJ</mainClass>
-  </configuration>
-  </plugin>
-  <plugin>
- <groupId>org.apache.maven.plugins</groupId>
- <artifactId>maven-site-plugin</artifactId>
- <version>3.4</version>
- <configuration>
- <reportPlugins>
- <plugin>
- <groupId>org.apache.maven.plugins</groupId>
- <artifactId>maven-project-info-reports-plugin</artifactId>
- <version>2.7</version>
- <reports>
- <report>index</report>
- <report>dependencies</report>
- <report>dependency-convergence</report>
- <report>plugin-management</report>
- <report>project-team</report>
- <report>plugins</report>
- <report>summary</report>
- </reports>
- </plugin>
- <plugin>
- <groupId>org.apache.maven.plugins</groupId>
- <artifactId>maven-javadoc-plugin</artifactId>
- <version>2.9.1</version>
- </plugin>
- </reportPlugins>
- </configuration>
- </plugin>
-
-  </plugins>
+  <build>
+    <plugins>
+      <!-- exec plugin to run java application through maven -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.3.2</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <mainClass>ca.etsmtl.log240.financej.FinanceJ</mainClass>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.4</version>
+        <configuration>
+          <reportPlugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-project-info-reports-plugin</artifactId>
+              <version>2.7</version>
+              <reports>
+                <report>index</report>
+                <report>dependencies</report>
+                <report>dependency-convergence</report>
+                <report>plugin-management</report>
+                <report>project-team</report>
+                <report>plugins</report>
+                <report>summary</report>
+              </reports>
+            </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-javadoc-plugin</artifactId>
+              <version>2.9.1</version>
+            </plugin>
+          </reportPlugins>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.12.1</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>2.5</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>pmd</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+        <configuration>
+          <sourceEncoding>UTF-8</sourceEncoding>
+          <rulesets>
+            <!-- Two rule sets that come bundled with PMD -->
+            <ruleset>/rulesets/basic.xml</ruleset>
+            <ruleset>/rulesets/design.xml</ruleset>
+          </rulesets>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>net.objectlab</groupId>
+        <artifactId>mvn-qalab-plugin</artifactId>
+        <version>2.2</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report-merge-chart</report>
+              <report>report-movers-all</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
   </build>
 </project>
